@@ -26,16 +26,18 @@ option java_outer_classname = "JointWrenchProtos";
 
 import "ignition/msgs/wrench.proto";
 import "ignition/msgs/header.proto";
+import "ignition/msgs/uint32.proto";
+import "ignition/msgs/stringmsg.proto";
 
 message JointWrench
 {
   /// \brief Optional header data
   Header header      = 1;
 
-  string body_1_name = 2;
-  uint32 body_1_id   = 3;
-  string body_2_name = 4;
-  uint32 body_2_id   = 5;
+  StringMsg body_1_name = 2;
+  UInt32 body_1_id   = 3;
+  StringMsg body_2_name = 4;
+  UInt32 body_2_id   = 5;
 
   Wrench body_1_wrench = 6;
   Wrench body_2_wrench = 7;
